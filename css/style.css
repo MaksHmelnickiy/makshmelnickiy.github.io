@@ -158,145 +158,211 @@ button {
   height: 0;
 }
 
-.jq-checkbox,
-.jq-radio {
+/***********************************
+ * Layout
+ ***********************************/
+.wSelect-el {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  overflow: hidden;
+}
+
+.wSelect {
   position: relative;
   display: inline-block;
-  overflow: hidden;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-.jq-checkbox input,
-.jq-radio input {
+.wSelect-arrow {
   position: absolute;
-  z-index: -1;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
+  width: 30px;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px center;
 }
 
-.jq-file {
-  position: relative;
-  display: inline-block;
+.wSelect-hover .wSelect-arrow,
+.wSelect-active .wSelect-arrow {
+  background-position: -120px -5px;
+}
+
+.wSelect.wSelect-multiple {
   overflow: hidden;
 }
 
-.jq-file input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  font-size: 100px;
-  line-height: 1em;
-}
-
-.jq-file__name {
+.wSelect-selected {
+  margin: 0px 35px 0px 8px;
+  padding: 5px 0;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
-.jq-selectbox,
-.jq-select-multiple {
-  position: relative;
-  display: inline-block;
-}
-
-.jq-selectbox select,
-.jq-select-multiple select {
+.wSelect-options-holder {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-}
-
-.jq-selectbox li,
-.jq-select-multiple li {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-}
-
-.jq-selectbox {
-  z-index: 10;
-}
-
-.jq-selectbox__select {
-  position: relative;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #9d9d9d;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  width: 210px;
-  height: 45px;
-}
-
-.jq-selectbox__select-text {
+  display: none;
+  left: 0px;
+  z-index: 200;
   overflow: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  content: '\e923';
 }
 
-.jq-selectbox__dropdown {
-  position: absolute;
+.wSelect-multiple .wSelect-options-holder {
+  position: relative !important;
+  display: block !important;
+  top: auto !important;
+  z-index: auto !important;
+  border: none !important;
 }
 
-.jq-selectbox__search input {
-  -webkit-appearance: textfield;
-}
-
-.jq-selectbox__search input::-webkit-search-cancel-button,
-.jq-selectbox__search input::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.jq-selectbox__dropdown ul {
-  position: relative;
-  overflow: auto;
+.wSelect-options {
+  overflow-y: scroll;
   overflow-x: hidden;
-  list-style: none;
-  -webkit-overflow-scrolling: touch;
 }
 
-.jq-select-multiple ul {
-  position: relative;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
+.wSelect-option {
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  margin-bottom: 1px;
+  cursor: pointer;
 }
 
-.jq-number {
-  display: inline-block;
+.wSelect-option-last {
+  margin-bottom: 0px;
 }
 
-.jq-number__field input {
-  -moz-appearance: textfield;
-  text-align: left;
-  /* для Opera Presto */
+.wSelect-option-value {
+  margin: 0 5px;
+  padding: 5px 0;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.jq-number__field input::-webkit-inner-spin-button,
-.jq-number__field input::-webkit-outer-spin-button {
-  margin: 0;
-  /* в каких-то браузерах присутствует отступ */
-  -webkit-appearance: none;
+.wSelect-option-disabled .wSelect-option-value {
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+}
+
+.wSelect-option-icon {
+  padding-left: 58px;
+  line-height: 30px;
+  font-size: 15.81px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+}
+
+/***********************************
+ * Theme - classic
+ ***********************************/
+.wSelect-theme-classic.wSelect {
+  border: solid #CCC 1px;
+  color: #555;
+  background-color: #FAFAFA;
+  font-size: 12px;
+  font-family: verdana;
+  line-height: 20px;
+  min-width: 100px;
+  max-width: 300px;
+  margin-bottom: 7px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.wSelect-arrow {
+  background-image: url(../../img/sprite.png);
+  background-position: -120px -5px;
+}
+
+.wSelect-theme-classic.wSelect-hover,
+.wSelect-theme-classic.wSelect-active {
+  border-color: #52a8ec;
+  border-color: rgba(82, 168, 236, 0.8);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+.wSelect-theme-classic .wSelect-options-holder {
+  background-color: #FAFAFA;
+  border: solid #CACACA 1px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.wSelect-theme-classic .wSelect-options {
+  border: solid #FAFAFA 1px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.wSelect-theme-classic .wSelect-option {
+  background-color: #FFF;
+  color: #333;
+}
+
+.wSelect-theme-classic .wSelect-option-disabled {
+  background-color: #FFF !important;
+  color: #333 !important;
+}
+
+.wSelect-theme-classic .wSelect-option-selected,
+.wSelect-theme-classic .wSelect-option:hover {
+  background-color: #99AAFF;
+  color: #FAFAFA;
+}
+
+/***********************************
+ * Labels
+ ***********************************/
+.wLabel-top,
+.wLabel-left,
+.wLabel-left-top {
+  vertical-align: middle;
+  font-size: 10px;
+  line-height: 16px;
+  color: #999;
+  display: block;
+  margin: 5px 0 3px 3px;
+}
+
+.wLabel-left-top {
+  vertical-align: top;
+}
+
+@media screen and (min-width: 600px) {
+  .wLabel-left,
+  .wLabel-left-top {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 70px;
+    text-align: right;
+    margin: 0 0 7px 0;
+  }
 }
 
 .cols.col-1 {
@@ -1009,7 +1075,7 @@ h3 {
 }
 
 .reservation-form .list__item:nth-of-type(2) {
-  margin-top: 16px;
+  margin-top: 9px;
 }
 
 .reservation-form .list__item:nth-of-type(2) .list__item__label {
@@ -1121,6 +1187,24 @@ h3 {
   content: '\e923';
 }
 
+.reservation-form .wSelect-theme-classic.wSelect-hover, .reservation-form .wSelect-theme-classic.wSelect-active, .reservation-form .wSelect-theme-classic.wSelect {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #9d9d9d;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  width: 210px !important;
+  height: 45px;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.reservation-form .wSelect-theme-classic .wSelect-options-holder {
+  width: 210px !important;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
 .list__item__visible {
   display: none;
 }
@@ -1152,6 +1236,7 @@ h3 {
   background-image: url(../../img/img.jpg);
   width: 180px;
   height: 100px;
+  cursor: pointer;
 }
 
 .slider__list__item__text {
@@ -1330,6 +1415,54 @@ h3 {
 .footer-box__about__link:nth-of-type(2) {
   margin-right: 1px;
   letter-spacing: 0.1px;
+}
+
+.popup {
+  position: fixed;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 12;
+  display: none;
+}
+
+.popup .slick-prev {
+  left: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.popup__element {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.7);
+}
+
+.popup .slick-prev:before {
+  font-size: 70px;
+}
+
+.popup .slick-next {
+  right: 70px;
+  cursor: pointer;
+}
+
+.popup .slick-next:before {
+  font-size: 70px;
+}
+
+.popup .slick-slide img {
+  width: 250px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup .slick-list {
+  height: 200px;
+  margin-top: 274px;
 }
 
 @media screen and (max-width: 1245px) {

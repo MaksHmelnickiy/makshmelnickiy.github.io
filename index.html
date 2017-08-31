@@ -9,10 +9,11 @@
 	<meta name="keywords" content="" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  	
+  	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href='css/slick.css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />	
 </head>
-<body class="loaded">
+<body >
 
 							
 <!-- BEGIN BODY -->
@@ -21,7 +22,6 @@
 <!-- BEGIN HEADER -->
 	
 		<header class="container">
-			
 				<div class="logo cols col-2">
 					<img class="logo__img" src="img/logo.png" alt="">
 					<span class="logo__text">ЛЮБЛЮ-НО</span>
@@ -62,7 +62,6 @@
 					<li class="list-box__item cols col-4">
 						<a href="" class="list-box__item__link">Спецпредложения</a>
 					</li>
-
 				</ul>
 			</div>
 			<div class="gamburger js">
@@ -122,30 +121,17 @@
 				<p class="reservation__text">Если у вас возникли вопросы или трудности в ходе бронирования –  звоните нам по номеру <span class="reservation__text__bold">+7 (495) 351-00-29</span></p>
 			</div>
 			<div class="reservation-form cols col-6">
-				<form action="" class="reservation-form__list list">
-					<div class="row list__item">
-						<label for="#select-1" class='list__item__label cols col-3'>Тип номера</label>
-						<select name="" id="select-1" class='list__item__dropdown cols col-4'>
-							<option class="list__item__dropdown__element" value="">
-							  	
-							</option>
-							<option class="list__item__dropdown__element" value="">эконом</option>
-
-						</select>
+				<form  class="reservation-form__list list">
+					<div class="row list__item js">
+						<label  class='list__item__label cols col-3'>Тип номера</label>
+						<select id="demo" class="lang__select" tabindex="1">
+							<option value="TH" data-icon="img/dds.png">(эконом)</option>
+							<option value="UK" data-icon="img/img-2.png">(эконом)</option>
+						 </select>
 					</div>
-<!--
-					<div class="sec lang list__select">
-					
-						<select>
-							<option></option>
-							<option class="lang-en">Английский</option>
-							
-						</select>
-					</div>
--->
 					<div class="row list__item">
-						<label for="" class='list__item__label cols col-3' for="#select-2">Взрослые</label>
-						<select name="" id="select-2" class='list__item__dropdown cols col-1'>
+						<label  class='list__item__label cols col-3' >Взрослые</label>
+						<select  id="select-2" class='list__item__dropdown cols col-1'>
 							<option value="">1</option>
 							<option value="">2</option>
 							<option value="">3</option>
@@ -153,36 +139,31 @@
 							<option value="">5</option>
 
 						</select>
-						
-					
-						<label class='list__item__label cols col-2' for="#select-3">Дети</label>
-						<select name="" id="select-3" class='list__item__dropdown cols col-1'>
+						<label class='list__item__label cols col-2' >Дети</label>
+						<select  id="select-3" class='list__item__dropdown cols col-1'>
 							<option value="">1</option>
 							<option value="">2</option>
 							<option value="">3</option>
 							<option value="">4</option>
 							<option value="">5</option>
-
 						</select>
 					</div>
 					<div class="row list__item">
-						<label class='list__item__label cols col-3' for="">Заезд</label>
+						<label class='list__item__label cols col-3'>Заезд</label>
 						<input class='list__item__dropdown cols col-3' type="text" id="datepicker-js">
 						<a href="#datepicker-js" class="icon-date list__item__date" ></a>
 						<div class="clearfix list__item__visible"></div>
-						<label class='list__item__label cols col-3' for="">Отъезд</label>
+						<label class='list__item__label cols col-3' >Отъезд</label>
 						<input class='list__item__dropdown cols col-3' type="text" id="datepicker-js-2">
 						<a href="#datepicker-js-2" class="icon-date list__item__date" ></a>
 					</div>
 					<div class="row list__item">
-						<label class='list__item__label cols col-3' for="">E-mail</label>
-						<input type="email" class='list__item__dropdown cols col-7' id ='email'>
-						
+						<label class='list__item__label cols col-3' >E-mail</label>
+						<input type="email" class='list__item__dropdown cols col-7' >
 					</div>	
 					<div class="row list__item">
-						<label class='list__item__label cols col-3' for="">Телефон</label>
-						<input type='tel' class='list__item__dropdown cols col-7' id ='email'>
-						
+						<label class='list__item__label cols col-3' >Телефон</label>
+						<input type='tel' class='list__item__dropdown cols col-7'>
 					</div>	
 				</form>
 			</div>
@@ -194,11 +175,23 @@
 				<div class="slider__list row">
 					<div class="slider__list__item cols col-4">
 						<div class="slider__list__item__img">
-							
 						</div>
 						<p class="slider__list__item__text">
 							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
-						
+						</p>
+					</div>
+					<div class="slider__list__item cols col-4">
+						<div class="slider__list__item__img">
+						</div>
+						<p class="slider__list__item__text">
+							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
+						</p>
+					</div>
+					<div class="slider__list__item cols col-4">
+						<div class="slider__list__item__img">
+						</div>
+						<p class="slider__list__item__text">
+							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
@@ -207,51 +200,41 @@
 						</div>
 						<p class="slider__list__item__text">
 							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
-						
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
 						<div class="slider__list__item__img">
-							
 						</div>
 						<p class="slider__list__item__text">
 							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
-						
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
 						<div class="slider__list__item__img">
-							
 						</div>
 						<p class="slider__list__item__text">
 							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
-						
 						</p>
 					</div>
-					<div class="slider__list__item cols col-4">
-						<div class="slider__list__item__img">
-							
-						</div>
-						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
-						
-						</p>
+				</div>
+			</div>
+			<div class="popup js">
+				<div class="popup__element"></div>	
+				<div class="popup__wrapper" >
+					<div class="popup__wrapper__item">
+						<img src="img/img.jpg" >
 					</div>
-					<div class="slider__list__item cols col-4">
-						<div class="slider__list__item__img">
-							
-						</div>
-						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
-						
-						</p>
+					<div class="popup__wrapper__item">
+						<img src="img/img.jpg" >
 					</div>
-				
+					<div class="popup__wrapper__item">
+						<img src="img/img.jpg" >
+					</div>
 				</div>
 			</div>
 			<div class="services cols col-6">
 				<p class="services__text">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</p>
-				<form action="" class="services__form">
+				<form  class="services__form">
 					<div class="services__form__checkbox cols col-3 checkbox js">
 						<span class="checkbox__item"></span>
 						<span class="icon-check checkbox__fade"></span>
@@ -281,6 +264,7 @@
 					</button>
 				</form>
 			</div>
+			
 		</div>		
 	</main>	
 			
@@ -296,7 +280,6 @@
 				<div class="footer-box__contacts__tel-img cols col-4 tel-img">
 					<span class="icon-tel"> </span>
 				</div>
-				
 				<span class="tel-img__number cols col-4">
 					+7 (495) 
 					<span class="tel-img__number__text">351-03-03</span>
@@ -315,23 +298,18 @@
 	</footer>
 	
 <!-- FOOTER EOF   -->
-
+	
 </div>		
 
-<div class="icon-load"></div>		
+	
 
 <!-- BODY EOF   -->
 	
 	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>		
 	<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
-	<!--
-	<script type="text/javascript" src="js/components/jquery.fancybox.js" ></script>
-	<script type="text/javascript" src="js/components/jquery.formstyler.js" ></script>
 	<script type="text/javascript" src="js/components/slick.js" ></script>
-	<script type="text/javascript" src="js/components/jquery.mCustomScrollbar.js" ></script>
-	-->
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="js/jquery.formstyler.min.js"></script>
+	<script src="js/wSelect.min.js"></script>
 	<script type="text/javascript" src="js/custom.js" ></script>
 	
 </body>

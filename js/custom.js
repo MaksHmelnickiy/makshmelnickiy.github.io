@@ -104,6 +104,7 @@ var handler = function(){
 	}
 	
 }
+
 $(window).bind('load', handler);
 $(window).bind('resize', handler);
 
@@ -134,4 +135,34 @@ $(this,'.services__form__checkbox').toggleClass('active');
 		})(jQuery);
 $('.gamburger').click(function(){
 	$('.menu-mobile').slideToggle();
+})
+$('.lang__select').wSelect();
+
+        $('#demo, #demo-multi').change(function() {
+          console.log($(this).val());
+        });
+
+        $('#demo').val('AU').change(); // should see in console
+        $('#demo').val('PL').wSelect('change'); // should see the selected option change to three
+        $('#demo').append().wSelect('reset');
+        $('#demo').val('CA').change();
+        
+        $('#demo-multi').val(['soccer', 'archery']).change();
+
+        // Testing append from one select to another.
+        $('#demo option:last').appendTo('#demo-multi');
+        $('#demo, #demo-multi').wSelect('reset');
+
+
+$('.popup__wrapper').slick({
+  arrows:true,
+  infinite: true,
+  speed: 500
+
+});
+$('.slider__list__item__img').click(function(){
+	$('.popup').fadeIn()
+})
+$('.popup__element').click(function(){
+	$('.popup').fadeOut()
 })
