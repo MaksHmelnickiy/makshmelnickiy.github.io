@@ -454,6 +454,21 @@ h3{
 		z-index: 15;
 	}
 }
+@-moz-document url-prefix(){
+	.reservation-form .list__item__date:nth-of-type(1){
+		margin-left: -293px;
+	}
+	@media screen and (max-width: 1200px) {
+		.reservation-form .list__item__date:nth-of-type(1){
+		margin-left: -270px;
+	}
+	}
+	@media screen and (max-width: 560px) {
+		.reservation-form .list__item__date:nth-of-type(1){
+		margin-left: -31px;;
+		}
+	}
+}
 @media screen and (max-width: 1245px) {
 	.main-wrapper{
 		
