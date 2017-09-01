@@ -1,40 +1,4 @@
-$(window).load(function(){
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-		$('body').addClass('ios');
-	} else{
-		$('body').addClass('web');
-	};
-	$('body').removeClass('loaded'); 
-});
-/* viewport width */
-function viewport(){
-	var e = window, 
-		a = 'inner';
-	if ( !( 'innerWidth' in window ) )
-	{
-		a = 'client';
-		e = document.documentElement || document.body;
-	}
-	return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
-};
-/* viewport width */
-$(function(){
-	/* placeholder*/	   
-	$('input, textarea').each(function(){
- 		var placeholder = $(this).attr('placeholder');
- 		$(this).focus(function(){ $(this).attr('placeholder', '');});
- 		$(this).focusout(function(){			 
- 			$(this).attr('placeholder', placeholder);  			
- 		});
- 	});
-	/* placeholder*/
 
-	$('.button-nav').click(function(){
-		$(this).toggleClass('active'), 
-		$('.main-nav-list').slideToggle(); 
-		return false;
-	});
-	
 	/* components */
 	
 	/*
@@ -87,26 +51,6 @@ $(function(){
 	
 	
 
-});
-
-var handler = function(){
-	
-	var height_footer = $('footer').height();	
-	var height_header = $('header').height();		
-	//$('.content').css({'padding-bottom':height_footer+40, 'padding-top':height_header+40});
-	
-	
-	var viewport_wid = viewport().width;
-	var viewport_height = viewport().height;
-	
-	if (viewport_wid <= 991) {
-		
-	}
-	
-}
-
-$(window).bind('load', handler);
-$(window).bind('resize', handler);
 
  $(function() {
     $( "#datepicker-js" ).datepicker();
@@ -135,6 +79,7 @@ $(this,'.services__form__checkbox').toggleClass('active');
 		})(jQuery);
 $('.gamburger').click(function(){
 	$('.menu-mobile').slideToggle();
+	$('.gamburger__link__img').toggleClass('fade')
 })
 $('.lang__select').wSelect();
 
@@ -157,12 +102,38 @@ $('.lang__select').wSelect();
 $('.popup__wrapper').slick({
   arrows:true,
   infinite: true,
-  speed: 500
+  speed: 500,
+  autoplay:true
 
 });
 $('.slider__list__item__img').click(function(){
-	$('.popup').fadeIn()
+	$('.popup').fadeIn();
+	$('.slick-next').click();
+	
+	
 })
+
 $('.popup__element').click(function(){
 	$('.popup').fadeOut()
 })
+
+$(document).ready(function() {
+			$(".checklist .checkbox-select ").click(
+				function(event) {
+					event.preventDefault();
+					$(this).parent().addClass("selected");
+					$(this).parent().find(":checkbox").attr("checked","checked");
+					
+				}
+			);
+			
+			$(".checklist .checkbox-deselect").click(
+				function(event) {
+					event.preventDefault();
+					$(this).parent().removeClass("selected");
+					$(this).parent().find(":checkbox").removeAttr("checked");
+					
+				}
+			);
+			
+		});

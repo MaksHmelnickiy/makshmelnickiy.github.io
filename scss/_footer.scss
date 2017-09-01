@@ -1,0 +1,110 @@
+
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+footer{
+		
+	
+	
+	width:100%;
+	min-width: $min-width;
+	position: absolute;
+	bottom: 30px;;
+   	
+  
+	
+}
+
+.footer-box{
+	
+	
+	top: -4px;
+	&__contacts{
+		margin-left: 29px;
+		.tel-img{
+			border: 1px solid #333;
+			display: block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			padding-left: 5px;
+			padding-top: 7px;
+			
+			margin-right: 3px;
+			&__number{
+				font-size: 18px;
+				width: 180px;
+				padding-top: 7px;
+    			padding-left: 4px;
+				&:hover{
+					color: blue;
+				}
+				&__text{
+					font-weight: 500;
+				}
+			}
+		}
+		.social{
+			&__item{
+				display: block;
+				border: 1px solid #333;
+				width: 32px;
+				height: 32px;
+				padding-left: 8px;
+				padding-top: 7px;
+				margin-left: 10px;
+				
+				&:nth-of-type(1){
+					padding-left: 11px;
+					font-size: 19px;
+				}
+				&:nth-of-type(2){
+					padding-left: 11px;
+					padding-top: 9px;
+					font-size: 13px;
+				}
+			}
+		}
+		
+	}
+	&__about{
+		float: right;
+		padding-top: 15px;
+		padding-right: 30px;
+		font-size: 14.4px;
+		&__link:hover{
+			color: blue;
+		}
+		&__link:nth-of-type(1){
+			margin-right: 10px;
+		}
+		&__link:nth-of-type(2){
+			margin-right: 1px;
+			letter-spacing: 0.1px;
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1200px) {
+	
+}
+
+@media screen and (min-width: 992px){
+	
+}
+
+@media screen and (max-width: 991px) {
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+}

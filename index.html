@@ -3,14 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 	<title>Главная</title>
 	<meta name='description' content="" />
 	<meta name="keywords" content="" />
-	<link rel="icon" type="image/x-icon" href="favicon.ico" />
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  	<link rel="stylesheet" href="css/slick-theme.css">
-	<link rel="stylesheet" href='css/slick.css'>
+	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />	
 </head>
 <body >
@@ -31,7 +31,7 @@
 					<ul class="main-nav__list">
 
 						<li class="main-nav__list__item cols col-2">
-							<a class="main-nav__list__item__link" href="#"></a>Об отеле
+							<a class="main-nav__list__item__link" href="#">Об отеле</a>
 						</li>
 						<li class="main-nav__list__item cols col-2">
 							<a class="main-nav__list__item__link " href="#">Номера</a>
@@ -45,9 +45,15 @@
 					</ul>
 				</nav>
 				<ul class="language cols col-1">
-					<li class="language__item cols col-4 language-js active" ><a href="#">Ru</a></li>
-					<li class="language__item cols col-4 language-js"><a href="#">En</a></li>
-					<li class="language__item cols col-4 language-js"><a href="#">Ch</a></li>
+					<li class="language__item cols col-4 language-js active" >
+						<a class="language__item__link" href="#">Ru</a>
+					</li>
+					<li class="language__item cols col-4 language-js">
+						<a class="language__item__link" href="#">En</a>
+					</li>
+					<li class="language__item cols col-4 language-js">
+						<a class="language__item__link" href="#">Ch</a>
+					</li>
 				</ul>
 				<ul class="list-box cols col-4">
 					<li class="list-box__item cols col-2">
@@ -66,7 +72,18 @@
 			</div>
 			<div class="gamburger js">
 				<a href="#" class="gamburger__link">
-					<img src="img/Hamburger_icon.svg.png" class="gamburger__link__img" alt="">
+					
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 				viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="gamburger__link__img ">
+						<g><g><path d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"/></g>
+						</g><g><g><path d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"/></g>
+						</g><g><g><path d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+					</svg>
+					<svg width="24" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64" class="gamburger__link__img fade" class="gamburger__link__img-1">
+						<g>
+							<path fill="#1D1D1B" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+						</g>
+					</svg>
 				</a>
 			</div>
 			<div class="menu-mobile js">
@@ -74,7 +91,7 @@
 					<ul class="main-nav__list">
 
 						<li class="main-nav__list__item ">
-							<a class="main-nav__list__item__link" href="#"></a>Об отеле
+							<a class="main-nav__list__item__link" href="#">Об отеле</a>
 						</li>
 						<li class="main-nav__list__item ">
 							<a class="main-nav__list__item__link " href="#">Номера</a>
@@ -87,11 +104,7 @@
 						</li>
 					</ul>
 				</nav>
-				<ul class="language ">
-					<li class="language__item language-js cols active" ><a href="#">Ru</a></li>
-					<li class="language__item language-js cols"><a href="#">En</a></li>
-					<li class="language__item language-js cols"><a href="#">Ch</a></li>
-				</ul>
+				
 				<ul class="list-box ">
 					<li class="list-box__item ">
 						<a href="#" class="list-box__item__link">Отзывы</a>
@@ -107,6 +120,18 @@
 					</li>
 
 				</ul>
+				
+				<ul class="language ">
+					<li class="language__item language-js cols active" >
+						<a class="language__item__link" href="#">Ru</a>
+					</li>
+					<li class="language__item language-js cols">
+						<a class="language__item__link" href="#">En</a>
+					</li>
+					<li class="language__item language-js cols">
+						<a class="language__item__link" href="#">Ch</a>
+					</li>
+				</ul>
 			</div>
 		</header>
 	
@@ -115,6 +140,7 @@
 
 	<main class="content">		
 		<div class="wrapper container">
+			
 			<div class="reservation cols col-6">
 				<p class="reservation__text">Онлайн бронирование номеров в отеле «Люблю-Но» - простота и комфорт. С помощью приведенной формы вы сможете забронировать наши номера в режиме онлайн и получить гарантированную бронь. Заказ номера займет у вас считанные минуты. Наши менеджеры работают оперативно и без ошибок, поэтому вы можете не сомневаться, что, когда Вы приедете, номер уже будет подготовлен к вашему приезду.</p>
 				<p class="reservation__text">Оплата проживания в нашем отеле может быть осуществлена наличными по прибытии в отель.</p>
@@ -177,21 +203,21 @@
 						<div class="slider__list__item__img">
 						</div>
 						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
+							<span class="icon-people_1"></span> - <span class="icon-people_2"></span>
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
 						<div class="slider__list__item__img">
 						</div>
 						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
+							<span class="icon-people_1"></span> - <span class="icon-people_2"></span>
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
 						<div class="slider__list__item__img">
 						</div>
 						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
+							<span class="icon-people_1"></span> - <span class="icon-people_2"></span>
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
@@ -199,21 +225,21 @@
 							
 						</div>
 						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
+							<span class="icon-people_1"></span> - <span class="icon-people_2"></span>
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
 						<div class="slider__list__item__img">
 						</div>
 						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
+							<span class="icon-people_1"></span> - <span class="icon-people_2"></span>
 						</p>
 					</div>
 					<div class="slider__list__item cols col-4">
 						<div class="slider__list__item__img">
 						</div>
 						<p class="slider__list__item__text">
-							<span class="icon-people_1"></span> -<span class="icon-people_2"></span>
+							<span class="icon-people_1"></span> - <span class="icon-people_2"></span>
 						</p>
 					</div>
 				</div>
@@ -225,16 +251,17 @@
 						<img src="img/img.jpg" alt =''>
 					</div>
 					<div class="popup__wrapper__item">
-						<img src="img/img.jpg" alt =''>
+						<img src="img/img.jpg" alt ='' >
 					</div>
 					<div class="popup__wrapper__item">
-						<img src="img/img.jpg" alt = ''>
+						<img src="img/img.jpg" alt = '' >
 					</div>
 				</div>
 			</div>
 			<div class="services cols col-6">
 				<p class="services__text">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</p>
 				<form  class="services__form">
+<!--
 					<div class="services__form__checkbox cols col-3 checkbox js">
 						<span class="checkbox__item"></span>
 						<span class="icon-check checkbox__fade"></span>
@@ -255,6 +282,64 @@
 						<span class="icon-check checkbox__fade"></span>
 						шампанское
 					</div>
+-->
+					
+					<fieldset class="services__check">
+						<label for="choices">
+							<ul class="checklist">
+								<li class="checklist__item">
+									<input name="jqdemo" value="value1" type="checkbox" />
+									
+									<a class="checkbox-select checklist__item__link-select" href="#">
+										<span class="icon-check checkbox__fade"></span>
+										бизнес ланч
+									</a>
+									<a class="checkbox-deselect checklist__item__link-deselect" href="#">
+										<span class="checkbox__item"></span>бизнес ланч
+									</a>
+									
+								</li>
+								<li class="checklist__item">
+									<input name="jqdemo" value="value2" type="checkbox" />
+									
+									<a class="checkbox-select checklist__item__link-select-2" href="#">
+										
+										<span class="icon-check checkbox__fade"></span>
+										ужин
+									</a>
+									<a class="checkbox-deselect checklist__item__link-deselect-2" href="#">
+										<span class="checkbox__item"></span>ужин
+									</a>
+								</li>
+								<li class="checklist__item">
+									<input name="jqdemo" value="value3" type="checkbox" />
+									
+									<a class="checkbox-select checklist__item__link-select-3" href="#">
+										
+										<span class="icon-check checkbox__fade"></span>
+										полдник
+									</a>
+									<a class="checkbox-deselect checklist__item__link-deselect-3" href="#">
+										<span class="checkbox__item"></span>полдник
+									</a>
+								</li>
+								<li class="checklist__item">
+									<input name="jqdemo"value="value4" type="checkbox" />
+									
+									<a class="checkbox-select checklist__item__link-select-4" href="#">
+										
+										<span class="icon-check checkbox__fade"></span>
+										шампанское
+									</a>
+									<a class="checkbox-deselect checklist__item__link-deselect-4" href="#">
+										<span class="checkbox__item"></span>шампанское
+									</a>
+								</li>
+							</ul>
+						</label>
+						
+					</fieldset>
+					
 					<div class="clearfix"></div>
 					<p class="services__form__text cols col-12">Итого: 
 						<span class="services__form__text__small">26 400 р.</span>
@@ -278,16 +363,16 @@
 		<div class="wrapper footer-box">
 			<div class="footer-box__contacts">
 				<div class="footer-box__contacts__tel-img cols col-4 tel-img">
-					<span class="icon-tel"> </span>
+					<a href="" class="icon-tel"> </a>
 				</div>
-				<span class="tel-img__number cols col-4">
+				<a href="#" class="tel-img__number cols col-4">
 					+7 (495) 
 					<span class="tel-img__number__text">351-03-03</span>
-				</span>
+				</a>
 				<div class="footer-box__contacts__social social cols col-4">
-					<span class="social__item icon-fb cols"></span>
-					<span class="social__item icon-vk cols"></span>
-					<span class="social__item icon-instagram cols"></span>
+					<a href="#" class="social__item icon-fb cols"></a>
+					<a href="#" class="social__item icon-vk cols"></a>
+					<a href="#" class="social__item icon-instagram cols"></a>
 				</div>
 			</div>
 			<div class="footer-box__about">
@@ -308,8 +393,9 @@
 	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>		
 	<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
 	<script type="text/javascript" src="js/components/slick.js" ></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
 	<script src="js/wSelect.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/custom.js" ></script>
 	
 </body>

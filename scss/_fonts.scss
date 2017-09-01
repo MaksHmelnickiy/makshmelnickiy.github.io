@@ -202,6 +202,7 @@
 }
 .icon-check:before {
   content: "\e91c";
+  font-size: 12px;
 }
 .icon-date:before {
   content: "\e91d";
@@ -210,6 +211,10 @@
 .icon-fb:before {
   content: "\e91e";
   color: #333;
+}
+.icon-fb:hover:before {
+  content: "\e91e";
+  color:blue;
 }
 .icon-img_1:before {
   content: "\e91f";
@@ -226,6 +231,10 @@
 .icon-instagram:before {
   content: "\e922";
   color: #333;
+}
+.icon-instagram:hover:before {
+  content: "\e922";
+  color: blue;
 }
 .icon-people_1:before {
   content: "\e923";
@@ -247,6 +256,11 @@
   content: "\e927";
   color: #333;
 }
+.icon-vk:hover:before{
+	content: "\e927"
+	;color: blue;
+}
+
 .icon-zoom:before {
   content: "\e928";
   color: #fff;
